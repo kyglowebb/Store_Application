@@ -113,4 +113,47 @@ app.get('/addtable1item5', (req, res) => {
 		if(err) throw err;
 		res.send('Item5 for table1 created')
 })
+
+app.get('/addtable2item1', (req, res) => {
+	let armor = {product_name='Battle Axe', weight_code='1.76', damage_code'1% critical hit chance 22 armor piercing', product_id='1234'};
+	let sql = 'INSERT INTO ARMOR ?';
+	let query = db.query(sql, armor,(err, result) => {
+		if(err) throw err;
+		res.send('Item1 for table2 created')
+})
+
+app.get('/addtable2item2', (req, res) => {
+	let armor = {product_name='CrossBow', weight_code='0.77', damage_code'+101% attack power', product_id='4678'};
+	let sql = 'INSERT INTO ARMOR ?';
+	let query = db.query(sql, armor,(err, result) => {
+		if(err) throw err;
+		res.send('Item2 for table2 created')
+})
+
+app.get('/addtable2item3', (req, res) => {
+	let armor = {product_name='Heavy Mace', weight_code='6.26', damage_code'+28-34 bludgeoning damage', product_id='9123'};
+	let sql = 'INSERT INTO ARMOR ?';
+	let query = db.query(sql, armor,(err, result) => {
+		if(err) throw err;
+		res.send('Item3 for table2 created')
+})
+
+app.get('/addtable2item4', (req, res) => {
+	let armor = {product_name='Poker', weight_code='1.51', damage_code'+29 bludgeoning damage', product_id='2329'};
+	let sql = 'INSERT INTO ARMOR ?';
+	let query = db.query(sql, armor,(err, result) => {
+		if(err) throw err;
+		res.send('Item4 for table2 created')
+})
+
+
+app.get('/addtable2item5', (req, res) => {
+	let armor = {product_name='Wooden Sword', weight_code='0.28', damage_code'+29 bludgeoning damage', product_id='2329'};
+	let sql = 'INSERT INTO ARMOR ?';
+	let query = db.query(sql, armor,(err, result) => {
+		if(err) throw err;
+		res.send('Item5 for table2 created')
+})
+
+
 //app.listen(3000);
